@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/KHTekaTRIAL-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/KHTekaTRIAL-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DrukCyr-Super.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DrukCyr-Heavy.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DrukCyr-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DotZeroBasic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>$TYPE</title>
+		<style>
+			body {
+      opacity: 0;
+      visibility: hidden;
+      background-color: #000;
+      transition: opacity 0.2s ease 0.2s, visibility 0.2s ease 0.2s;
+    }
+    .wrapper {
+      position: relative;
+    }
+    .wrapper__filter {
+      pointer-events: none;
+      user-select: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      mix-blend-mode: soft-light;
+      background: url('./assets/img/filter-mob.png') center / 100% repeat-y;
+      z-index: 1000;
+    }
+
+    @media (min-width: 767.98px) {
+      .wrapper__filter {
+        background: url('./assets/img/filter.png') center / 100% repeat-y;
+      }
+    }
+
+    [data-fls-loaded] body {
+      opacity: 1;
+      visibility: visible;
+    }
+		</style>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1746621156105"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1746621156105">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrapper__filter"></div>
+			<header data-fls-header="" class="header">
+				<div class="header__container">
+					<a href="../" class="header__logo">$TYPE</a>
+					<div class="header__menu menu">
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu"></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".about" data-fls-scrollto-top="-4" class="menu__link">About</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".how" data-fls-scrollto-top="-4" class="menu__link">How to buy</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".tokenomics" data-fls-scrollto-top="47" class="menu__link">tokenomics</a>
+								</li>
+							</ul>
+							<div class="menu__image-mob">
+								<img src="./assets/img/mob-menu.svg" alt="$TYPE">
+							</div>
+							<ul class="menu__list-mob">
+								<li class="menu__item-mob">
+									<a href="#" data-fls-scrollto=".about" data-fls-scrollto-top="-4" class="menu__link-mob">
+										<span>01</span>
+										<span>About</span>
+										<span></span>
+									</a>
+								</li>
+								<li class="menu__item-mob">
+									<a href="#" data-fls-scrollto=".how" data-fls-scrollto-top="-4" class="menu__link-mob">
+										<span>02</span>
+										<span>How to buy</span>
+										<span></span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".tokenomics" data-fls-scrollto-top="47" class="menu__link-mob">
+										<span>03</span>
+										<span>tokenomics</span>
+										<span></span>
+									</a>
+								</li>
+							</ul>
+							<div class="menu__social-mob">
+								<a href="#" class="menu__social-item-mob">telegram</a>
+								<a href="#" class="menu__social-item-mob">x (twitter)</a>
+								<a href="#" class="menu__social-item-mob">dextools</a>
+							</div>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<a href="#" target="_blank" class="header__buy">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+								<g clip-path="url(#clip0_312_37329)">
+									<path d="M17.4297 8.84671L14.5213 8.95331C11.862 9.05078 9.72869 11.1841 9.63122 13.8434L9.52462 16.7518L9.41803 13.8434C9.32056 11.1841 7.18726 9.05078 4.52799 8.95331L1.61956 8.84671L4.52798 8.74012C7.18726 8.64265 9.32056 6.50935 9.41803 3.85008L9.52462 0.94165L9.63122 3.85007C9.72869 6.50935 11.862 8.64265 14.5213 8.74012L17.4297 8.84671Z" fill="white"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_312_37329">
+										<rect width="11.8522" height="12.6987" fill="white" transform="translate(9.52344 0.46582) rotate(45)"></rect>
+									</clipPath>
+								</defs>
+							</svg>
+							<span>buy now</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+								<g clip-path="url(#clip0_312_37329)">
+									<path d="M17.4297 8.84671L14.5213 8.95331C11.862 9.05078 9.72869 11.1841 9.63122 13.8434L9.52462 16.7518L9.41803 13.8434C9.32056 11.1841 7.18726 9.05078 4.52799 8.95331L1.61956 8.84671L4.52798 8.74012C7.18726 8.64265 9.32056 6.50935 9.41803 3.85008L9.52462 0.94165L9.63122 3.85007C9.72869 6.50935 11.862 8.64265 14.5213 8.74012L17.4297 8.84671Z" fill="white"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_312_37329">
+										<rect width="11.8522" height="12.6987" fill="white" transform="translate(9.52344 0.46582) rotate(45)"></rect>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<div class="header__social">
+							<a href="https://t.me/TYPESHITSolana" target="_blank" class="header__social-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0965 4.73616C17.3057 4.64811 17.5347 4.61774 17.7596 4.64822C17.9846 4.67869 18.1972 4.7689 18.3755 4.90945C18.5537 5.04999 18.691 5.23574 18.7731 5.44736C18.8552 5.65898 18.879 5.88873 18.8422 6.11271L16.9221 17.7591C16.7359 18.8826 15.5033 19.5268 14.473 18.9672C13.6111 18.499 12.3311 17.7778 11.1798 17.0251C10.6041 16.6484 8.84066 15.442 9.05738 14.5836C9.24363 13.8496 12.2067 11.0915 13.8998 9.45163C14.5644 8.80738 14.2613 8.43573 13.4765 9.02833C11.5277 10.4997 8.39874 12.7372 7.36422 13.3671C6.4516 13.9224 5.97582 14.0172 5.40692 13.9224C4.36901 13.7497 3.40645 13.4822 2.62082 13.1563C1.5592 12.716 1.61084 11.2565 2.61997 10.8316L17.0965 4.73616Z" fill="white"></path>
+								</svg>
+							</a>
+							<a href="https://x.com/type_shit_sol" target="_blank" class="header__social-item">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewbox="0 0 21 22" fill="none">
+									<g clip-path="url(#clip0_312_37340)">
+										<path d="M16.5942 1.93774H19.7101L12.9035 9.73694L20.9117 20.3516H14.6422L9.72813 13.9152L4.11166 20.3516H0.992853L8.27249 12.0068L0.59375 1.9392H7.02294L11.4581 7.82125L16.5942 1.93774ZM15.4984 18.4824H17.2255L6.0796 3.70976H4.22776L15.4984 18.4824Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_312_37340">
+											<rect width="20.318" height="20.318" fill="white" transform="translate(0.59375 0.985596)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<section class="page__hero hero">
+					<div class="hero__bg">
+						<div class="hero__bg-bg">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/hero/bg-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/hero/bg- 1920.webp" type="image/webp">
+								<img alt="BG" src="./assets/img/hero/bg.webp">
+							</picture>
+						</div>
+						<div class="hero__bg-smoke">
+							<div class="hero__bg-smoke-1">
+								<picture>
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/smoke-1200.webp" type="image/webp">
+									<source media="(max-width: 1920px)" srcset="./assets/img/hero/smoke- 1920.webp" type="image/webp">
+									<img alt="Smoke" src="./assets/img/hero/smoke.webp">
+								</picture>
+							</div>
+							<div class="hero__bg-smoke-2">
+								<picture>
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/smoke-1200.webp" type="image/webp">
+									<source media="(max-width: 1920px)" srcset="./assets/img/hero/smoke- 1920.webp" type="image/webp">
+									<img alt="Smoke" src="./assets/img/hero/smoke.webp">
+								</picture>
+							</div>
+						</div>
+						<div class="hero__bg-light">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/hero/light-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/hero/light- 1920.webp" type="image/webp">
+								<img alt="Light" src="./assets/img/hero/light.webp">
+							</picture>
+						</div>
+						<div class="hero__bg-main">
+							<picture>
+								<source media="(max-width: 678px)" srcset="./assets/img/hero/01-678.webp" type="image/webp">
+								<source media="(max-width: 1200px)" srcset="./assets/img/hero/01- 1200.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/hero/01.webp">
+							</picture>
+						</div>
+					</div>
+					<div class="hero__container">
+						<h1 class="hero__title">
+							<img alt="Title" src="./assets/img/hero/title.webp">
+							<img alt="Title-Decor" src="./assets/img/hero/title-dec1.webp">
+							<img alt="Title-Decor" src="./assets/img/hero/title-dec2.webp">
+						</h1>
+						<div class="hero__actions">
+							<a href="#" target="_blank" class="hero__buy">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+									<g clip-path="url(#clip0_309_20279)">
+										<path d="M26.5859 13.1996L22.0057 13.3675C17.8177 13.521 14.4582 16.8806 14.3047 21.0685L14.1368 25.6488L13.9689 21.0685C13.8154 16.8806 10.4558 13.521 6.26794 13.3675L1.68765 13.1996L6.26794 13.0318C10.4558 12.8783 13.8154 9.51868 13.9689 5.33077L14.1368 0.750488L14.3047 5.33077C14.4582 9.51868 17.8177 12.8783 22.0057 13.0318L26.5859 13.1996Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_309_20279">
+											<rect width="18.6651" height="19.9984" fill="white" transform="translate(14.1328 0.0012207) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+								<span>buy now</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+									<g clip-path="url(#clip0_309_20279)">
+										<path d="M26.5859 13.1996L22.0057 13.3675C17.8177 13.521 14.4582 16.8806 14.3047 21.0685L14.1368 25.6488L13.9689 21.0685C13.8154 16.8806 10.4558 13.521 6.26794 13.3675L1.68765 13.1996L6.26794 13.0318C10.4558 12.8783 13.8154 9.51868 13.9689 5.33077L14.1368 0.750488L14.3047 5.33077C14.4582 9.51868 17.8177 12.8783 22.0057 13.0318L26.5859 13.1996Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_309_20279">
+											<rect width="18.6651" height="19.9984" fill="white" transform="translate(14.1328 0.0012207) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<div class="hero__social">
+								<a href="https://t.me/TYPESHITSolana" target="_blank" class="hero__social-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewbox="0 0 33 33" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.2002 6.57628C27.5297 6.43762 27.8903 6.38979 28.2445 6.43779C28.5988 6.48578 28.9336 6.62784 29.2143 6.84918C29.495 7.07051 29.7112 7.36304 29.8405 7.6963C29.9698 8.02957 30.0074 8.39139 29.9493 8.74411L26.9256 27.0853C26.6323 28.8545 24.6911 29.869 23.0686 28.9878C21.7114 28.2505 19.6955 27.1146 17.8823 25.9294C16.9757 25.3361 14.1986 23.4362 14.5399 22.0843C14.8333 20.9284 19.4995 16.5848 22.166 14.0023C23.2126 12.9878 22.7353 12.4025 21.4994 13.3357C18.4303 15.6529 13.5027 19.1766 11.8735 20.1685C10.4363 21.0431 9.687 21.1924 8.79108 21.0431C7.15655 20.7711 5.64067 20.3498 4.40344 19.8365C2.73157 19.1433 2.8129 16.8448 4.4021 16.1755L27.2002 6.57628Z" fill="white"></path>
+									</svg>
+								</a>
+								<a href="https://x.com/type_shit_sol" target="_blank" class="hero__social-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewbox="0 0 33 33" fill="none">
+										<g clip-path="url(#clip0_309_20290)">
+											<path d="M25.6979 2.16968H30.605L19.8858 14.4521L32.4974 31.1684H22.6239L14.8851 21.0321L6.04012 31.1684H1.12852L12.5927 18.0267L0.5 2.17196H10.6249L17.6095 11.4352L25.6979 2.16968ZM23.9724 28.2247H26.6921L9.13929 4.96031H6.22296L23.9724 28.2247Z" fill="white"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_309_20290">
+												<rect width="31.9974" height="31.9974" fill="white" transform="translate(0.5 0.670166)"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="hero__studio">
+							<img alt="studio" src="./assets/img/hero/studio.webp">
+						</div>
+					</div>
+				</section>
+				<div data-fls-marquee="" class="page__line">
+					<img src="./assets/img/line/01.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/03.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/01.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/03.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+				</div>
+				<section class="page__about about" data-fls-watcher="navigator">
+					<div class="about__bg">
+						<picture>
+							<source media="(max-width: 1200px)" srcset="./assets/img/about/bg-1200.webp" type="image/webp">
+							<source media="(max-width: 1920px)" srcset="./assets/img/about/bg- 1920.webp" type="image/webp">
+							<img alt="BG" src="./assets/img/about/bg.webp">
+						</picture>
+					</div>
+					<div class="about__container" data-fls-watcher-threshold="0.75" data-fls-watcher-once="" data-fls-watcher="">
+						<div class="about__top">
+							<div class="about__top-number">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewbox="0 0 21 21" fill="none">
+									<g clip-path="url(#clip0_309_19771)">
+										<path d="M19.9453 9.89963L16.5098 10.0255C13.3686 10.1407 10.8487 12.6606 10.7336 15.8018L10.6077 19.2373L10.4818 15.8018C10.3666 12.6606 7.84675 10.1407 4.70556 10.0255L1.27007 9.89963L4.70556 9.77372C7.84675 9.65859 10.3666 7.1387 10.4818 3.9975L10.6077 0.562012L10.7336 3.9975C10.8487 7.1387 13.3686 9.65859 16.5098 9.77372L19.9453 9.89963Z" fill="#B5B5B5"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_309_19771">
+											<rect width="14" height="15" fill="white" transform="translate(10.6094) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+								<span>01</span>
+							</div>
+							<h2 class="about__top-title">[ About type ]</h2>
+							<div class="about__top-text">
+								<p>
+									Type Shit, also known as Type Shi or Type Shiii, refers to an
+            African American Vernacular English (AAVE) slang term with many
+								</p>
+								<p>
+									interpretations, often used to express agreement or approval for
+            something of high quality or as a shorthand for "that kind of
+            stuff."
+								</p>
+							</div>
+						</div>
+						<div class="about__main">
+							<div class="about__main-text">
+								<p>You either get it or you don’t… Type shit.</p>
+								<p>Too real to fake, too rare to copy</p>
+								<p>— that's that Type Shit.</p>
+							</div>
+							<div class="about__main-actions">
+								<a href="#" target="_blank" class="about__main-buy">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewbox="0 0 21 21" fill="none">
+										<g clip-path="url(#clip0_309_19730)">
+											<path d="M20.4453 9.89963L17.0098 10.0255C13.8686 10.1407 11.3487 12.6606 11.2336 15.8018L11.1077 19.2373L10.9818 15.8018C10.8666 12.6606 8.34675 10.1407 5.20556 10.0255L1.77007 9.89963L5.20556 9.77372C8.34675 9.65859 10.8666 7.1387 10.9818 3.9975L11.1077 0.562012L11.2336 3.9975C11.3487 7.1387 13.8686 9.65859 17.0098 9.77372L20.4453 9.89963Z" fill="white"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_309_19730">
+												<rect width="14" height="15" fill="white" transform="translate(11.1094) rotate(45)"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+									<span>buy now</span>
+									<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewbox="0 0 21 21" fill="none">
+										<g clip-path="url(#clip0_309_19730)">
+											<path d="M20.4453 9.89963L17.0098 10.0255C13.8686 10.1407 11.3487 12.6606 11.2336 15.8018L11.1077 19.2373L10.9818 15.8018C10.8666 12.6606 8.34675 10.1407 5.20556 10.0255L1.77007 9.89963L5.20556 9.77372C8.34675 9.65859 10.8666 7.1387 10.9818 3.9975L11.1077 0.562012L11.2336 3.9975C11.3487 7.1387 13.8686 9.65859 17.0098 9.77372L20.4453 9.89963Z" fill="white"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_309_19730">
+												<rect width="14" height="15" fill="white" transform="translate(11.1094) rotate(45)"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+								<div class="about__main-social">
+									<a href="https://t.me/TYPESHITSolana" target="_blank" class="about__main-social-item">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 25 25" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M20.2903 4.92997C20.5374 4.82596 20.8079 4.79008 21.0736 4.82608C21.3393 4.86208 21.5905 4.96863 21.801 5.13465C22.0115 5.30067 22.1737 5.52008 22.2707 5.77005C22.3677 6.02002 22.3958 6.29141 22.3523 6.55597L20.0843 20.313C19.8643 21.64 18.4083 22.401 17.1913 21.74C16.1733 21.187 14.6613 20.335 13.3013 19.446C12.6213 19.001 10.5383 17.576 10.7943 16.562C11.0143 15.695 14.5143 12.437 16.5143 10.5C17.2993 9.73897 16.9413 9.29997 16.0143 9.99997C13.7123 11.738 10.0163 14.381 8.79433 15.125C7.71633 15.781 7.15433 15.893 6.48233 15.781C5.25633 15.577 4.11933 15.261 3.19133 14.876C1.93733 14.356 1.99833 12.632 3.19033 12.13L20.2903 4.92997Z" fill="white"></path>
+										</svg>
+									</a>
+									<a href="https://x.com/type_shit_sol" target="_blank" class="about__main-social-item">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewbox="0 0 25 25" fill="none">
+											<g clip-path="url(#clip0_309_19741)">
+												<path d="M18.9156 1.62451H22.5962L14.5562 10.8371L24.0156 23.3754H16.6099L10.8053 15.7725L4.17105 23.3754H0.487054L9.08591 13.5182L0.015625 1.62623H7.60991L12.8488 8.57423L18.9156 1.62451ZM17.6213 21.1674H19.6613L6.49563 3.71765H4.3082L17.6213 21.1674Z" fill="white"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_309_19741">
+													<rect width="24" height="24" fill="white" transform="translate(0.015625 0.5)"></rect>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__how how" data-fls-watcher="navigator">
+					<div class="how__bg">
+						<div class="how__bg-top">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/how/top-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/how/top- 1920.webp" type="image/webp">
+								<img alt="Top" src="./assets/img/how/top.webp">
+							</picture>
+						</div>
+						<div class="how__bg-bg">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/how/bg-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/how/bg- 1920.webp" type="image/webp">
+								<img alt="BG" src="./assets/img/how/bg.webp">
+							</picture>
+						</div>
+					</div>
+					<div class="how__container">
+						<div class="how__top">
+							<div class="how__top-number">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewbox="0 0 21 21" fill="none">
+									<g clip-path="url(#clip0_309_19777)">
+										<path d="M19.9453 9.89963L16.5098 10.0255C13.3686 10.1407 10.8487 12.6606 10.7336 15.8018L10.6077 19.2373L10.4818 15.8018C10.3666 12.6606 7.84675 10.1407 4.70556 10.0255L1.27007 9.89963L4.70556 9.77372C7.84675 9.65859 10.3666 7.1387 10.4818 3.9975L10.6077 0.562012L10.7336 3.9975C10.8487 7.1387 13.3686 9.65859 16.5098 9.77372L19.9453 9.89963Z" fill="black"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_309_19777">
+											<rect width="14" height="15" fill="white" transform="translate(10.6094) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+								<span>02</span>
+							</div>
+							<h2 class="how__top-title">[ HOW TO BUY ]</h2>
+							<div class="how__top-dec">
+								<svg xmlns="http://www.w3.org/2000/svg" width="53" height="25" viewbox="0 0 53 25" fill="none">
+									<path d="M26.3672 0.666992C33.5746 0.666992 40.0675 2.01083 44.7334 4.15527C49.4569 6.32623 52.0684 9.19106 52.0684 12.1191C52.0681 15.0471 49.4566 17.9112 44.7334 20.082C40.0675 22.2265 33.5746 23.5703 26.3672 23.5703C19.1598 23.5703 12.6668 22.2265 8.00098 20.082C3.27789 17.9112 0.667277 15.047 0.666992 12.1191C0.666992 9.19111 3.27762 6.32622 8.00098 4.15527C12.6668 2.01082 19.1598 0.667021 26.3672 0.666992Z" stroke="black" stroke-width="1.33374"></path>
+									<path d="M26.3916 0.666992C31.7166 0.666992 36.5063 1.99888 39.9424 4.11719C43.3889 6.24203 45.3828 9.09012 45.3828 12.1191C45.3826 15.148 43.3887 17.9954 39.9424 20.1201C36.5063 22.2384 31.7166 23.5703 26.3916 23.5703C21.0668 23.5703 16.2778 22.2384 12.8418 20.1201C9.39533 17.9954 7.40158 15.148 7.40137 12.1191C7.40137 9.09005 9.39514 6.24204 12.8418 4.11719C16.2778 1.99892 21.0668 0.667047 26.3916 0.666992Z" stroke="black" stroke-width="1.33374"></path>
+									<path d="M25.9131 0.666992C32.4628 0.666992 37.7383 5.81339 37.7383 12.1191C37.738 18.4247 32.4627 23.5703 25.9131 23.5703C19.3636 23.5702 14.0891 18.4246 14.0889 12.1191C14.0889 5.81349 19.3635 0.667142 25.9131 0.666992Z" stroke="black" stroke-width="1.33374"></path>
+									<line x1="0.664062" y1="11.3053" x2="52.7334" y2="11.3053" stroke="black" stroke-width="1.33374"></line>
+									<line x1="6" y1="5.15637" x2="46.6791" y2="5.15637" stroke="black" stroke-width="1.33374"></line>
+									<line x1="3.98432" y1="17.8077" x2="48.7738" y2="17.8038" stroke="black" stroke-width="1.33374"></line>
+									<line x1="25.7159" y1="23.874" x2="25.7159" y2="2.09808e-05" stroke="black" stroke-width="1.33374"></line>
+								</svg>
+							</div>
+						</div>
+						<div class="how__items" data-fls-watcher-threshold="0.51" data-fls-watcher-once="" data-fls-watcher="">
+							<article class="how__item red">
+								<div class="how__item-text">
+									<p>[</p>
+									<p>
+										First things first — you need a wallet that’s got that Solana
+              power.Get a Solana wallet like Phantom or Sollet. It’s quick, it’s
+              easy, and it’s your ticket to the game.
+									</p>
+									<p>]</p>
+								</div>
+								<h3 class="how__item-title">
+									<span class="how__item-title-num">Step 1</span>
+									<span class="how__item-title-text">Get Your Wallet</span>
+								</h3>
+							</article>
+							<article class="how__item grey">
+								<h3 class="how__item-title">
+									<span class="how__item-title-num">Step 2</span>
+									<span class="how__item-title-text">Load Up on Some SOL</span>
+								</h3>
+								<div class="how__item-text">
+									<p>[</p>
+									<p>
+										You can’t buy $typeshit without some SOL in your pocket.
+										<br>
+										Head to an exchange like Binance or FTX, grab some Solana, and
+              send it to your wallet. Simple as that.
+									</p>
+									<p>]</p>
+								</div>
+							</article>
+							<article class="how__item">
+								<div class="how__item-image">
+									<img alt="Image" src="./assets/img/how/01.webp">
+								</div>
+							</article>
+							<article class="how__item grey">
+								<h3 class="how__item-title">
+									<span class="how__item-title-num">Step 4</span>
+									<span class="how__item-title-text">Flex Your $typeshit</span>
+								</h3>
+								<div class="how__item-text">
+									<p>[</p>
+									<p>
+										You got it, now show it off.
+										<br>
+										Hold that $typeshit tight or flip it for some gains, it’s all up
+              to you. But remember, this coin don’t follow no rules.
+									</p>
+									<p>]</p>
+								</div>
+							</article>
+							<article class="how__item dark-red">
+								<div class="how__item-text">
+									<p>[</p>
+									<p>
+										Now that your wallet's full, it's time to flip it.Go to a Solana
+              DEX (like Raydium or Serum) and swap that SOL for $typeshit. No
+              middlemen, no hassle.
+									</p>
+									<p>]</p>
+								</div>
+								<h3 class="how__item-title">
+									<span class="how__item-title-num">Step 3</span>
+									<span class="how__item-title-text">Hit the DEX, Let’s Get It</span>
+								</h3>
+							</article>
+						</div>
+					</div>
+				</section>
+				<div data-fls-marquee="" class="page__line">
+					<img src="./assets/img/line/01.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/03.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/01.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+					<img src="./assets/img/line/03.svg" alt="Element">
+					<img src="./assets/img/line/02.svg" alt="Element">
+				</div>
+				<section class="page__tokenomics tokenomics" data-fls-watcher="navigator">
+					<div class="tokenomics__rows">
+						<div class="tokenomics__row lg" data-fls-watcher-threshold="0.75" data-fls-watcher-once="" data-fls-watcher="">
+							<div class="tokenomics__container">
+								<div class="tokenomics__row-info">
+									<span>total supply</span>
+									<span>10b</span>
+								</div>
+								<div class="tokenomics__row-text">
+									<p>
+										That’s the total number of tokens that’ll ever exist. No more, no
+              less — once they’re all out, they’re gone, so hold tight while you
+              can.
+									</p>
+									<span>01</span>
+								</div>
+							</div>
+						</div>
+						<div class="tokenomics__row g" data-fls-watcher-threshold="0.75" data-fls-watcher-once="" data-fls-watcher="">
+							<div class="tokenomics__container">
+								<div class="tokenomics__row-info">
+									<span>Liquidity pool</span>
+									<span>BURNT</span>
+								</div>
+								<div class="tokenomics__row-text">
+									<p>
+										Think of it like the main hub for trading your tokens. When you
+              want to buy or sell, the liquidity pool is where the magic happens
+              to keep your trades flowing.
+									</p>
+									<span>02</span>
+								</div>
+							</div>
+						</div>
+						<div class="tokenomics__row b" data-fls-watcher-threshold="0.75" data-fls-watcher-once="" data-fls-watcher="">
+							<div class="tokenomics__container">
+								<div class="tokenomics__row-info">
+									<span>buy/sell tax</span>
+									<span>0/0</span>
+								</div>
+								<div class="tokenomics__row-text">
+									<p>
+										A small fee taken with every transaction. You buy or sell — and a
+              little goes to support the project and keep it alive. Clean and
+              simple.
+									</p>
+									<span>03</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tokenomics__ca">
+						<div class="tokenomics__container">
+							<h3 class="tokenomics__ca-title">
+								<span>contract address</span>
+							</h3>
+							<div class="tokenomics__ca-body">
+								<span id="tokenValue">0x72f2a15b9de693c63c0b0c5e3f7f4cbe0986babc</span>
+								<button type="button" class="copy-ca-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewbox="0 0 36 36" fill="none">
+										<path d="M9 28.5V1.5H22.5L31.5 10.5V28.5H9ZM21 12H28.5L21 4.5V12ZM3 34.5V10.5H6V31.5H22.5V34.5H3Z" fill="#E6E4DD"></path>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__join join" data-fls-watcher-threshold="0.75" data-fls-watcher-once="" data-fls-watcher="">
+					<div class="join__bg">
+						<div class="join__bg-bg">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/join/bg-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/join/bg- 1920.webp" type="image/webp">
+								<img alt="BG" src="./assets/img/join/bg.webp">
+							</picture>
+						</div>
+						<div class="join__bg-smoke">
+							<picture>
+								<source media="(max-width: 1200px)" srcset="./assets/img/join/smoke-1200.webp" type="image/webp">
+								<source media="(max-width: 1920px)" srcset="./assets/img/join/smoke- 1920.webp" type="image/webp">
+								<img alt="Smoke" src="./assets/img/join/smoke.webp">
+							</picture>
+						</div>
+					</div>
+					<div class="join__container">
+						<h2 class="join__title">JOIN US</h2>
+						<div class="join__actions">
+							<a href="#" target="_blank" class="join__buy">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+									<g clip-path="url(#clip0_312_37235)">
+										<path d="M26.9219 13.5307L22.3416 13.6986C18.1537 13.852 14.7941 17.2116 14.6406 21.3995L14.4727 25.9798L14.3049 21.3995C14.1514 17.2116 10.7918 13.852 6.60387 13.6986L2.02359 13.5307L6.60387 13.3628C10.7918 13.2093 14.1514 9.84974 14.3049 5.66182L14.4727 1.08154L14.6406 5.66182C14.7941 9.84974 18.1537 13.2093 22.3416 13.3628L26.9219 13.5307Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_312_37235">
+											<rect width="18.6651" height="19.9984" fill="white" transform="translate(14.4688 0.332031) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+								<span>buy now</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+									<g clip-path="url(#clip0_312_37235)">
+										<path d="M26.9219 13.5307L22.3416 13.6986C18.1537 13.852 14.7941 17.2116 14.6406 21.3995L14.4727 25.9798L14.3049 21.3995C14.1514 17.2116 10.7918 13.852 6.60387 13.6986L2.02359 13.5307L6.60387 13.3628C10.7918 13.2093 14.1514 9.84974 14.3049 5.66182L14.4727 1.08154L14.6406 5.66182C14.7941 9.84974 18.1537 13.2093 22.3416 13.3628L26.9219 13.5307Z" fill="white"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_312_37235">
+											<rect width="18.6651" height="19.9984" fill="white" transform="translate(14.4688 0.332031) rotate(45)"></rect>
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<div class="join__social">
+								<a href="https://t.me/TYPESHITSolana" target="_blank" class="join__social-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewbox="0 0 32 33" fill="none">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3721 6.23815C26.7016 6.09948 27.0622 6.05166 27.4164 6.09965C27.7706 6.14764 28.1055 6.2897 28.3862 6.51104C28.6669 6.73238 28.8831 7.0249 29.0124 7.35817C29.1417 7.69143 29.1792 8.05326 29.1212 8.40597L26.0975 26.7471C25.8042 28.5163 23.863 29.5309 22.2404 28.6496C20.8832 27.9124 18.8674 26.7765 17.0542 25.5912C16.1476 24.9979 13.3705 23.0981 13.7118 21.7462C14.0051 20.5903 18.6714 16.2467 21.3379 13.6642C22.3844 12.6496 21.9071 12.0643 20.6712 12.9976C17.6022 15.3147 12.6746 18.8385 11.0454 19.8304C9.60815 20.705 8.85888 20.8543 7.96295 20.705C6.32842 20.433 4.81254 20.0117 3.57531 19.4984C1.90345 18.8051 1.98478 16.5066 3.57398 15.8374L26.3721 6.23815Z" fill="white"></path>
+									</svg>
+								</a>
+								<a href="https://x.com/type_shit_sol" target="_blank" class="join__social-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewbox="0 0 33 33" fill="none">
+										<g clip-path="url(#clip0_312_37246)">
+											<path d="M25.5339 1.83154H30.4409L19.7218 14.114L32.3333 30.8303H22.4598L14.721 20.694L5.87605 30.8303H0.964457L12.4287 17.6885L0.335938 1.83383H10.4608L17.4454 11.0971L25.5339 1.83154ZM23.8083 27.8865H26.5281L8.97523 4.62217H6.0589L23.8083 27.8865Z" fill="white"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_312_37246">
+												<rect width="31.9974" height="31.9974" fill="white" transform="translate(0.335938 0.332031)"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<span>2025 © ALL RIGHTS RESERVED</span>
+					<a href="https://t.me/osnovoco" target="_blank">
+						<span>Designed by</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="31" height="28" viewbox="0 0 31 28" fill="none">
+							<path d="M10.6183 8.51611L18.0143 20.8946H3.22229L10.6183 8.51611Z" fill="white"></path>
+							<path d="M22.9014 14.8477L16.835 4.84412L28.9678 4.84412L22.9014 14.8477Z" fill="white"></path>
+						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="74" height="14" viewbox="0 0 74 14" fill="none">
+							<path d="M62 6.60898C62 5.46415 62.258 4.45637 62.774 3.58566C63.3061 2.71494 64.0236 2.03772 64.9266 1.55398C65.8295 1.05413 66.8534 0.804199 67.9983 0.804199C69.1431 0.804199 70.1589 1.05413 71.0458 1.55398C71.9488 2.03772 72.6663 2.71494 73.1984 3.58566C73.7305 4.45637 73.9966 5.46415 73.9966 6.60898C73.9966 7.73769 73.7305 8.74546 73.1984 9.6323C72.6663 10.503 71.9488 11.1883 71.0458 11.6882C70.1589 12.1719 69.1431 12.4138 67.9983 12.4138C66.8534 12.4138 65.8295 12.1719 64.9266 11.6882C64.0236 11.1883 63.3061 10.503 62.774 9.6323C62.258 8.74546 62 7.73769 62 6.60898ZM64.6847 6.60898C64.6847 7.30233 64.8298 7.91506 65.1201 8.44716C65.4103 8.96314 65.8054 9.37431 66.3052 9.68068C66.8051 9.97092 67.3694 10.116 67.9983 10.116C68.611 10.116 69.1673 9.97092 69.6671 9.68068C70.1831 9.37431 70.5862 8.96314 70.8765 8.44716C71.1667 7.91506 71.3118 7.30233 71.3118 6.60898C71.3118 5.91563 71.1667 5.30291 70.8765 4.7708C70.5862 4.2387 70.1831 3.82752 69.6671 3.53728C69.1673 3.24704 68.611 3.10192 67.9983 3.10192C67.3694 3.10192 66.8051 3.24704 66.3052 3.53728C65.8054 3.82752 65.4103 4.2387 65.1201 4.7708C64.8298 5.30291 64.6847 5.91563 64.6847 6.60898Z" fill="white"></path>
+							<path d="M50.0312 1.04736H52.8853L55.7877 8.23078L58.69 1.04736H61.5683L55.7877 13.189L50.0312 1.04736Z" fill="white"></path>
+							<path d="M37.6016 6.60898C37.6016 5.46415 37.8596 4.45637 38.3755 3.58566C38.9076 2.71494 39.6252 2.03772 40.5281 1.55398C41.4311 1.05413 42.455 0.804199 43.5998 0.804199C44.7447 0.804199 45.7605 1.05413 46.6473 1.55398C47.5503 2.03772 48.2678 2.71494 48.8 3.58566C49.3321 4.45637 49.5981 5.46415 49.5981 6.60898C49.5981 7.73769 49.3321 8.74546 48.8 9.6323C48.2678 10.503 47.5503 11.1883 46.6473 11.6882C45.7605 12.1719 44.7447 12.4138 43.5998 12.4138C42.455 12.4138 41.4311 12.1719 40.5281 11.6882C39.6252 11.1883 38.9076 10.503 38.3755 9.6323C37.8596 8.74546 37.6016 7.73769 37.6016 6.60898ZM40.2863 6.60898C40.2863 7.30233 40.4314 7.91506 40.7216 8.44716C41.0119 8.96314 41.4069 9.37431 41.9068 9.68068C42.4066 9.97092 42.971 10.116 43.5998 10.116C44.2126 10.116 44.7689 9.97092 45.2687 9.68068C45.7847 9.37431 46.1878 8.96314 46.478 8.44716C46.7683 7.91506 46.9134 7.30233 46.9134 6.60898C46.9134 5.91563 46.7683 5.30291 46.478 4.7708C46.1878 4.2387 45.7847 3.82752 45.2687 3.53728C44.7689 3.24704 44.2126 3.10192 43.5998 3.10192C42.971 3.10192 42.4066 3.24704 41.9068 3.53728C41.4069 3.82752 41.0119 4.2387 40.7216 4.7708C40.4314 5.30291 40.2863 5.91563 40.2863 6.60898Z" fill="white"></path>
+							<path d="M32.4327 5.39965C32.4327 4.57731 32.2634 3.95652 31.9248 3.53728C31.5861 3.11805 31.0621 2.90843 30.3526 2.90843C29.8689 2.90843 29.4416 3.01324 29.0707 3.22286C28.6999 3.41635 28.4096 3.70659 28.2 4.09358C27.9904 4.46444 27.8856 4.8998 27.8856 5.39965V12.1719H25.2734V1.04607H27.8856V2.76331C28.2403 2.10221 28.6918 1.61042 29.24 1.28793C29.8044 0.965443 30.4736 0.804199 31.2475 0.804199C32.5052 0.804199 33.4646 1.19118 34.1257 1.96516C34.7868 2.723 35.1174 3.77109 35.1174 5.10941V12.1719H32.4327V5.39965Z" fill="white"></path>
+							<path d="M15.5159 8.51972C15.8707 8.90671 16.2254 9.24532 16.5802 9.53556C16.951 9.80967 17.3219 10.0193 17.6927 10.1644C18.0636 10.2934 18.4345 10.3579 18.8053 10.3579C19.2729 10.3579 19.6357 10.2531 19.8937 10.0435C20.1678 9.83386 20.3049 9.54362 20.3049 9.17276C20.3049 8.85027 20.2001 8.57616 19.9905 8.35042C19.7808 8.10855 19.4906 7.90699 19.1197 7.74575C18.7489 7.56838 18.3135 7.39101 17.8137 7.21365C17.3138 7.02015 16.814 6.79441 16.3141 6.53642C15.8304 6.26231 15.4273 5.90757 15.1048 5.47221C14.7984 5.03685 14.6452 4.48862 14.6452 3.82752C14.6452 3.1503 14.8145 2.58594 15.1531 2.13446C15.5079 1.68298 15.9755 1.35243 16.556 1.14281C17.1526 0.91707 17.7895 0.804199 18.4667 0.804199C19.0794 0.804199 19.6518 0.892884 20.184 1.07025C20.7322 1.24762 21.224 1.48142 21.6593 1.77166C22.0947 2.0619 22.4656 2.39245 22.7719 2.76331L21.3207 4.31125C20.9499 3.8759 20.5064 3.52116 19.9905 3.24704C19.4745 2.97293 18.9424 2.83587 18.3941 2.83587C18.0233 2.83587 17.7169 2.91649 17.4751 3.07774C17.2332 3.23898 17.1123 3.47279 17.1123 3.77915C17.1123 4.03714 17.2171 4.27094 17.4267 4.48056C17.6524 4.67405 17.9427 4.85142 18.2974 5.01267C18.6683 5.17391 19.0794 5.34322 19.5309 5.52058C20.1436 5.76245 20.708 6.0285 21.224 6.31874C21.74 6.60898 22.1511 6.96372 22.4575 7.38295C22.78 7.80219 22.9412 8.35042 22.9412 9.02764C22.9412 10.0757 22.5784 10.9223 21.8528 11.5672C21.1434 12.1961 20.1759 12.5105 18.9504 12.5105C18.1926 12.5105 17.4912 12.3976 16.8462 12.1719C16.2174 11.93 15.6611 11.6237 15.1773 11.2528C14.7097 10.8658 14.3147 10.4627 13.9922 10.0435L15.5159 8.51972Z" fill="white"></path>
+							<path d="M0.539062 6.60898C0.539062 5.46415 0.797053 4.45637 1.31303 3.58566C1.84514 2.71494 2.56267 2.03772 3.46564 1.55398C4.36861 1.05413 5.39251 0.804199 6.53734 0.804199C7.68217 0.804199 8.69801 1.05413 9.58485 1.55398C10.4878 2.03772 11.2053 2.71494 11.7375 3.58566C12.2696 4.45637 12.5356 5.46415 12.5356 6.60898C12.5356 7.73769 12.2696 8.74546 11.7375 9.6323C11.2053 10.503 10.4878 11.1883 9.58485 11.6882C8.69801 12.1719 7.68217 12.4138 6.53734 12.4138C5.39251 12.4138 4.36861 12.1719 3.46564 11.6882C2.56267 11.1883 1.84514 10.503 1.31303 9.6323C0.797053 8.74546 0.539062 7.73769 0.539062 6.60898ZM3.22377 6.60898C3.22377 7.30233 3.36889 7.91506 3.65913 8.44716C3.94937 8.96314 4.34442 9.37431 4.84428 9.68068C5.34413 9.97092 5.90849 10.116 6.53734 10.116C7.15006 10.116 7.70636 9.97092 8.20621 9.68068C8.72219 9.37431 9.1253 8.96314 9.41554 8.44716C9.70578 7.91506 9.8509 7.30233 9.8509 6.60898C9.8509 5.91563 9.70578 5.30291 9.41554 4.7708C9.1253 4.2387 8.72219 3.82752 8.20621 3.53728C7.70636 3.24704 7.15006 3.10192 6.53734 3.10192C5.90849 3.10192 5.34413 3.24704 4.84428 3.53728C4.34442 3.82752 3.94937 4.2387 3.65913 4.7708C3.36889 5.30291 3.22377 5.91563 3.22377 6.60898Z" fill="white"></path>
+						</svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
